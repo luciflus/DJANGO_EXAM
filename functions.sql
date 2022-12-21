@@ -4,6 +4,8 @@ SELECT uc.id
 FROM user_course AS uc
 INNER JOIN user_student AS s
 ON s.id = uc.student_id
+WHERE s.email = email
 $$ LANGUAGE SQL
 
 SELECT * FROM get_course_id_by_email('aman@mail.ru')
+
